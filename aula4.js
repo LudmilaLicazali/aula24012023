@@ -1,6 +1,9 @@
 // AULA COM COMANDOS SWITCH
 
 
+// Ativiadade 1 - 25/01/2024
+// OBS.: OS EXERCICIOS COMEÇAM NA LINHA 63
+
 // exemplo menu utilizando o teclado para escolher entre as opções tipo mostrar o menu
 
 
@@ -57,154 +60,278 @@
 //     }       
 
 
+//"Exercicio 1 - Hotel")
+
+    let hotel = require('prompt-sync') ()
+
+    hospede = hotel ("Digite o nome do Hospede: ")
+
+    console.log("Serviços disponiveis:");
+
+    console.log("1 - Fazer cheking " +  
+                " 2 - Chamar Serviço de Quarto " + 
+                " 3 - Fazer Pedido " + 
+                " 4 - Fazer Chekout "
+                );
+
+    servico = parseInt(hotel("Escolha o tipo de serviço: ")); 
+        switch (servico){
+
+            case 1:    
+                console.log("O serviço escolhido foi Cheking")
+                //nomeHospede = leia ("Digite o nome do Hospede: ")
+                //hospede = leia
+            break;
+
+            case 3:
+                console.log("O serviço escolhido foi Chamar Serviço de Quarto")
+             break;
+
+            case 4:
+                console.log("O serviço escolhido foi Fazer Pedido")
+                console.log("Café da mnhã" + "Almoço" + "Jantar") // opções de pedido 
+            break;
+
+            case 5:
+                console.log("O serviço escolhido foi Chekout")
+                // ver como incluir função de somar a conta e informar valor final da estadia.
+                console.log(hospede, "obrigado pela estadia. Volte Sempre!!")
+            break;
+
+            default:
+                console.log("Serviço selecionado indisponivel. Por favor escolha um seriço válido, ou entre em contato com a recepção.")
+        }
+
+// Fim Exercicio 1 - Hotel
+
+//exercicio 2 - Caluculadora
 
 
+    let calc = require('prompt-sync') ()
 
-// Exercicio 1 - Hotel
-
-// let leia = require('prompt-sync') ()
-
-// hospede = leia ("Digite o nome do Hospede: ")
-
-// console.log("Serviços disponiveis:");
-
-// console.log("1 - Fazer cheking " +  
-//             " 2 - Chamar Serviço de Quarto " + 
-//             " 3 - Fazer Pedido " + 
-//             " 4 - Fazer Chekout "
-//             );
-
-//  servico = parseInt(leia("Escolha o tipo de serviço: ")); 
-//     switch (servico){
-
-//         case 1:    
-//             console.log("O serviço escolhido foi Cheking")
-//             //nomeHospede = leia ("Digite o nome do Hospede: ")
-//             //hospede = leia
-//             break;
-
-//             case 3:
-//             console.log("O serviço escolhido foi Chamar Serviço de Quarto")
-//             break;
-
-//             case 4:
-//                 console.log("O serviço escolhido foi Fazer Pedido")
-//                 console.log("Café da mnhã" + "Almoço" + "Jantar") // opções de pedido 
-//                 break;
-
-//             case 5:
-//                 console.log("O serviço escolhido foi Chekout")
-//                 //função de somar a conta e informar valor final da estadia.
-//                 console.log(hospede, "obrigado pela estadia. Volte Sempre!!")
-//                 break;
-
-//             default:
-//                 console.log("Serviço selecionado indisponivel. Por favor escolha um seriço válido, ou entre em contato com a recepção.")
-//     }
-
-//fim exercicio 1
-
-    //exercicio 2 - Caluculadora
-
-    //digitar primeiro operando
-    //escolher uma das 4 operações
-    //escolher segundo operando
-    //mostras resultado
-
-    // let leia = require('prompt-sync') ()
-
-    // console.log("Serviços disponiveis:");
+    console.log("Serviços disponiveis:");
     
-    // console.log(" 1 -> + : soma " +  
-    //             " 2 -> - : subtração " + 
-    //             " 3-> / : divisão " + 
-    //             " 4 -> * : multiplicação "
-    //             );
+    console.log(" 1 -> + : soma " +  
+                " 2 -> - : subtração " + 
+                " 3-> / : divisão " + 
+                " 4 -> * : multiplicação "
+                );
 
-    // valor1 = parseInt(leia ("Digite 1º valor: "))           
+    valor1 = parseInt(calc ("Digite 1º valor: "))           
     
 
-    //  operacao = parseInt(leia("Escolha a operação (+ - / * ): ")); 
+     operacao = parseInt(calc("Escolha a operação (+ - / * ): ")); 
 
-    //  valor2 = parseInt(leia ("Digite 2º valor: "))
+     valor2 = parseInt(calc("Digite 2º valor: "))
 
-    //     switch (operacao){
+        switch (operacao){
     
-    //         case 1:    
-    //             console.log(valor1 + valor2)
-    //             break;
+            case 1:    
+                console.log(valor1 + valor2)
+            break;
     
-    //             case 2:
-    //             console.log(valor1 - valor2)
-    //             break;
+            case 2:
+                console.log(valor1 - valor2)
+            break;
     
-    //             case 3:
-    //                 console.log(valor1 / valor2)
-    //                 break;
+            case 3:
+                console.log(valor1 / valor2)
+            break;
     
-    //             case 4:
-    //                 console.log(valor1 * valor2)
-    //                 break;
+            case 4:
+                console.log(valor1 * valor2)
+            break;
     
-    //             default:
-    //                 console.log("Operação inválida")
-    //     }
-    // //fim exercicio 2
+            default:
+                console.log("Operação inválida")
+        }
 
-    //exercicio 3 - Peso Ideal
+//fim exercicio 2
 
-    // leia = require('prompt-sync') ()
+//exercicio 3 - Peso Ideal
 
-    // peso = leia("Digite seu peso: ")
+    ideal = require('prompt-sync') ()
 
-    // sexo = leia("Escolha F ou M: ")
+    peso = ideal("Digite seu peso: ")
 
-    // switch (sexo){
+    sexo = ideal("Escolha F ou M: ")
+
+    switch (sexo){
     
-    //         case "F":   
-    //             console.log("Seu peso ideal é: ", (peso - 100) * 0.9)
-    //             break;
-    
-    //             case "M":
-    //                 console.log("Seu peso ideal é: ", (peso - 100) * 0.85)
-    //             break;
-    
-    //             default:
-    //                 console.log("Não foi possivel calcular seu peso ideal.")
-
-    // }
-    //fim exercicio 3
-
-    // exercicio 4 - cliente vip
-
-    leia = require('prompt-sync') ()
-
-    valor = parseInt(leia("Digite valor total da compra: "))
-
-    console.log(" Escolha o tipo de desconto " + " 1 - Funcionário " + " 2 - Cliente VIP ")
-    desconto = leia(" ")
-   
-    //let fucionario = 0.1
-    //let vip = 0.05
-
-    switch (desconto){
-            
-            case 1:  
-                fucnionário = (valor - (valor-0.1))
-                console.log("Valor total da compra com desconto de funcionário é: ", (valor - (valor -0.1)))
+            case "F":   
+                console.log("Seu peso ideal é: ", (peso - 100) * 0.9)
                 break;
     
-                case 2:
-                    
-                    console.log("Valor total da compra com desconto de Cliente VIP é: ", (valor - (valor - 0.05)))
+                case "M":
+                    console.log("Seu peso ideal é: ", (peso - 100) * 0.85)
                 break;
     
                 default:
-                    console.log("Nenhum valor de desconto aplicado. Total a pagar", valor)
+                    console.log("Não foi possivel calcular seu peso ideal.")
 
     }
 
-    // fim exercicio 4
+//fim exercicio 3
+
+// exercicio 4 - cliente vip
+
+
+    let cvip = require('prompt-sync') ();
+
+    valor = parseFloat(cvip("Digite valor total da compra: "))
+    console.log(" Escolha o tipo de desconto " + " 1 - Funcionário " + " 2 - Cliente VIP ")
+
+    desconto = parseInt(cvip("Tipo de desconto "))
+        
+    switch (desconto){
+            
+        case 1:  
+            console.log("Valor total da compra com desconto de funcionário é: ", valor - (valor * 0.1))
+        break;
+    
+        case 2:   
+                console.log("Valor total da compra com desconto de Cliente VIP é: ", valor - (valor * 0.05))
+        break;
+    
+        default:
+            console.log("Nenhum valor de desconto aplicado. Total a pagar", valor)
+    }
+
+// fim exercicio 4
+
+
+//exercicio 5 - calendario
+
+        let leia = require('prompt-sync') ()
+
+        console.log("digite um numero de 1 a 12 referente ao mês:");
+        
+        console.log("1- Janeiro " + " / 2- Fevereiro " + " / 3- Março \n 4- Abril " + " / 5- Maio " + " / 6- Junho\n 7- Julho" + " / 8- Agosto" + " / 9- Setembro\n 10- Outubro" + " / 11- Novembro" + " / 12- Dezembro");
+
+        mes = parseInt(leia ("Mês escolhido: "))
+
+        switch (mes){
+
+            case 1:
+                console.log ("Janeiro")
+            break;
+
+            case 2:
+                console.log ("Fevereiro")
+            break;
+
+            case 3:
+                console.log ("Março")
+            break;
+            
+            case 4:
+                console.log ("Abriu")
+            break;
+        
+            case 5:
+                console.log ("Maio")
+            break;
+
+            case 6:
+                console.log ("Junho")
+            break;
+            
+            case 7:
+                console.log ("Julho")
+            break;
+            
+            case 8:
+                console.log ("Agosto")
+            break;
+            
+            case 9:
+                console.log ("Setembro")
+            break;
+            
+            case 10:
+                console.log ("Outubro")
+            break;
+            
+            case 11:
+                console.log ("Novembro")
+            break;
+            
+            case 12:
+                console.log ("Dezembro")
+            break;
+
+            default:
+                console.log ("Esse mês não existe.")
+        }
+
+// fim exercicio 5
+
+
+//exercicio 6 - Taxa de natalidade
+
+        leia = require('prompt-sync') ()
+
+        console.log("O deseja calcular:");
+        console.log ("1-Natalidade\n2-Mortalidade")
+        taxa = parseInt(leia("Indicador:"))
+
+
+        habitantes = parseInt(leia("Digite a numero de Habitantes:"))
+        
+
+        switch (taxa){
+
+            case 1:
+                nascimento = parseInt(leia("Digite a quantidade de nacimentos:"))
+                console.log ("Taxa de Natalidade: ", (nascimento *1000) / habitantes )
+            break;
+
+            case 2:
+                obito = parseInt(leia("Digite a quantidade de óbitos:"))
+                console.log ("Taxa de Mortalidade: ", (obito *1000) / habitantes )
+            break;
+
+            default:
+                console.log ("Não foi possivel calcular.")
+        }
+
+ // fim exercio 6
+
+
+// exercicio 7
+
+        leia = require('prompt-sync') ()
+
+        
+        valorProdut = parseFloat(leia("Digite o valor do produto: "))
+    
+
+        console.log("Forma de pagamento: ");
+        console.log ("1-À vista\n2-À prazo")
+        pagamento = parseInt(leia("Escolha a forma de pagamento:"))
+
+        switch(pagamento) {
+            case 1: 
+            aVista = valorProdut  - (valorProdut * 0.1)
+            console.log (" Valor final da compra á vista", aVista)
+
+            default: 
+            console.log (" Valor do produto", valorProdut)
+        }
+
+// fim esxercicio 7
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -252,5 +379,4 @@
     
     //             default:
     //                 console.log("Operação inválida")
-    //     }
-    // //fim exercicio 2
+   // }
